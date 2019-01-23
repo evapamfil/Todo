@@ -11,6 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $faker = Faker\Factory::create();
+        foreach (range(1,1000) as $index) {
+            DB::table('tasks')->insert([
+                'name' => $faker->name,
+            ]);
+        }
     }
 }

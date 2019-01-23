@@ -28,7 +28,7 @@ class TaskController extends Controller
     }
 
     public function get(Task $task) {
-        $tasks = $task->all();
+        $tasks = $task->paginate(10);
 
         return view('tasks', [
             'tasks' => $tasks

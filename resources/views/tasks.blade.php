@@ -44,6 +44,7 @@
 
                 </div>
             @endforeach
+                {{ $tasks->links() }}
         </div>
 
 
